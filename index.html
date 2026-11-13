@@ -171,7 +171,8 @@ body.filtering .clear{visibility:visible}
 .contact{border:1px solid var(--ink);padding:40px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:32px;align-items:center}
 .contact h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,3.4vw,2.6rem);margin:0 0 8px;line-height:1.1}
 .contact p{margin:0;color:var(--ink-2)}
-@media (max-width:800px){.contact{grid-template-columns:1fr;padding:26px}}
+@media (max-width:800px){.contact{grid-template-columns:minmax(0,1fr);padding:24px 14px}}
+.contact>*{min-width:0}
 
 /* contact card — styled as a drawing parts list (hero) / sheet (contact) */
 .ccard{position:relative;margin-top:28px;max-width:540px;border:1px solid var(--ink);background:var(--paper)}
@@ -215,7 +216,7 @@ a.cv:hover{color:var(--accent);background-size:100% 1px}
 .navcta{font-family:var(--mono);font-size:.74rem;padding:6px 10px;background:var(--accent);color:#fff!important;text-decoration:none;border-radius:2px;letter-spacing:.04em;white-space:nowrap}
 .navcta:hover{filter:brightness(1.1)}
 @media (max-width:560px){.crow{grid-template-columns:22px minmax(0,1fr) auto;gap:12px}.crow .cref{display:none}
-  .cgo{display:none}.cv,.ccard.big .cv{font-size:1.02rem!important}.chead{font-size:.6rem;white-space:nowrap;gap:8px}.chead>span:first-child{overflow:hidden;text-overflow:ellipsis}
+  .cgo{display:none}.cv,.ccard.big .cv{font-size:1rem!important;overflow-wrap:normal}.chead{font-size:.6rem;flex-wrap:wrap;gap:4px 8px}.chead span{white-space:nowrap}
   .ccard.big .rows{display:block}
   .ccard.big .crow{grid-template-columns:22px minmax(0,1fr) auto;grid-template-areas:none;align-items:center;padding:12px 14px;gap:12px;border-left:0;border-bottom:0;border-top:1px solid var(--rule)}
   .ccard.big .crow:first-child{border-top:0}
@@ -567,7 +568,7 @@ function render(){
   const row=(r,n)=>`<div class="crow">
       <span class="cref">C.${String(n+1).padStart(2,"0")}</span>
       <svg class="cico" viewBox="0 0 24 24" aria-hidden="true">${ICON[r.k]}</svg>
-      <span class="cbody"><span class="ck">${esc(T[r.k][lang])}</span>${r.href?`<a class="cv" href="${esc(r.href)}"${r.ext?' target="_blank" rel="noopener"':""}>${esc(r.v)}</a>`:`<span class="cv">${esc(r.v)}</span>`}</span>
+      <span class="cbody"><span class="ck">${esc(T[r.k][lang])}</span>${r.href?`<a class="cv" href="${esc(r.href)}"${r.ext?' target="_blank" rel="noopener"':""}>${esc(r.v).replace("@","@<wbr>")}</a>`:`<span class="cv">${esc(r.v)}</span>`}</span>
       <span class="cact">${r.copy?`<button class="cp" data-copy="${esc(r.copy)}" aria-label="${esc(T.copy[lang])} ${esc(T[r.k][lang])}" title="${esc(T.copy[lang])}">${I_COPY}</button>`:""}${r.href?`<a class="cgo" href="${esc(r.href)}"${r.ext?' target="_blank" rel="noopener"':""} aria-label="${esc(T.openLbl[lang])} ${esc(T[r.k][lang])}" title="${esc(T.openLbl[lang])}">${I_GO}</a>`:""}</span>
     </div>`;
   document.querySelectorAll(".contactRows").forEach(box=>{
