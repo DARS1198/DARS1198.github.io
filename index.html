@@ -400,7 +400,7 @@ footer{padding:40px 0 48px}
             </div>
             <div class="cl-res">
               <div class="cl-card"><span class="k" data-cl="kml"></span><span class="d" id="clDml">–</span><span class="c" id="clCml"></span><span class="s" data-cl="sml"></span></div>
-              <div class="cl-card mine"><span class="k"><em data-cl="tag"></em> <span data-cl="kdl"></span></span><span class="d" id="clDdl">–</span><span class="c" id="clCdl"></span><span class="s" data-cl="sdl"></span></div>
+              <div class="cl-card mine"><span class="k" data-cl="kdl"></span><span class="d" id="clDdl">–</span><span class="c" id="clCdl"></span><span class="s" data-cl="sdl"></span></div>
             </div>
           </div>
         </div>
@@ -864,9 +864,9 @@ const SIM_META = {
   mnist:{n:"02", tab:{es:"Dígitos",en:"Digits"}, tl:{es:"FIG. 02 — CNN MNIST / MODELO REAL",en:"FIG. 02 — MNIST CNN / REAL MODEL"},
          bl:{es:"DIBUJA UN DÍGITO DEL 0 AL 9",en:"DRAW A DIGIT FROM 0 TO 9"}, br:{es:"11,436 PARÁMETROS",en:"11,436 PARAMS"}, btn:{es:"Borrar",en:"Clear"},
          cap:{es:"<b>Mi red entrenada (Keras)</b> corriendo en tu navegador, sin servidor. El recuadro 28×28 es lo que ve el modelo.",en:"<b>My trained network (Keras)</b> running in your browser, no server. The 28×28 box is what the model sees."}},
-  clf:  {n:"03", tab:{es:"Clasificación",en:"Classifier"}, tl:{es:"FIG. 03 — MI CNN vs REGRESIÓN LOGÍSTICA",en:"FIG. 03 — MY CNN vs LOGISTIC REGRESSION"},
+  clf:  {n:"03", tab:{es:"Clasificación",en:"Classifier"}, tl:{es:"FIG. 03 — MI MODELO vs REGRESIÓN LOGÍSTICA",en:"FIG. 03 — MY MODEL vs LOGISTIC REGRESSION"},
          bl:{es:"DIBUJA UN DÍGITO Y COMPARA",en:"DRAW A DIGIT AND COMPARE"}, br:{es:"PREPROCESAMIENTO TIPO OPENCV",en:"OPENCV-STYLE PREPROCESSING"}, btn:{es:"Borrar",en:"Clear"},
-         cap:{es:"<b>Mi CNN vs. una regresión logística típica</b> con el mismo dibujo. La CNN es el modelo que entrené yo; la regresión logística es una referencia estándar de Scikit-Learn, entrenada para esta demo con su dataset digits.",en:"<b>My CNN vs. a standard logistic regression</b> on the same drawing. The CNN is the model I trained; the logistic regression is a standard Scikit-Learn baseline, trained for this demo on its digits dataset."}},
+         cap:{es:"<b>Mi modelo (CNN) vs. una regresión logística típica</b> con el mismo dibujo. La CNN es el modelo que entrené yo; la regresión logística es una referencia estándar de Scikit-Learn, entrenada para esta demo con su dataset digits.",en:"<b>My model (CNN) vs. a standard logistic regression</b> on the same drawing. The CNN is the model I trained; the logistic regression is a standard Scikit-Learn baseline, trained for this demo on its digits dataset."}},
   slam: {n:"04", tab:{es:"SLAM",en:"SLAM"}, tl:{es:"FIG. 04 — SLAM / LIDAR 2D",en:"FIG. 04 — SLAM / 2D LIDAR"},
          bl:{es:"HAZ CLIC PARA ENVIAR EL ROBOT",en:"CLICK TO SEND THE ROBOT"}, br:null, btn:{es:"Reiniciar",en:"Reset"},
          cap:{es:"<b>Simulación ilustrativa</b>: un robot construye un mapa de ocupación con su lidar mientras navega.",en:"<b>Illustrative simulation</b>: a robot builds an occupancy map with its lidar as it navigates."}},
@@ -1064,7 +1064,7 @@ $("#simBtn").addEventListener("click",()=>SIM.hooks[SIM.active]?.reset?.());
   let drawing=false,last=null,strokes=[],lastRun=0,dirty=false;
   const L={s1:{es:"1 · Grises",en:"1 · Grayscale"},s2:{es:"2 · Binarizado",en:"2 · Threshold"},s3:{es:"3 · Recorte 32×32",en:"3 · Crop 32×32"},s4:{es:"4 · Features 8×8",en:"4 · 8×8 features"},
            kml:{es:"Regresión logística típica",en:"Standard logistic regression"},sml:{es:"Referencia · Scikit-Learn",en:"Baseline · Scikit-Learn"},
-           tag:{es:"MÍA",en:"MINE"},kdl:{es:"Mi CNN",en:"My CNN"},sdl:{es:"Entrenada por mí · Keras",en:"Trained by me · Keras"}};
+           kdl:{es:"Mi modelo",en:"My model"},sdl:{es:"CNN · Keras",en:"CNN · Keras"}};
   function clear(){ ctx.clearRect(0,0,280,280); ic.fillStyle="#000"; ic.fillRect(0,0,280,280); S.forEach(s=>{s.fillStyle="#000";s.fillRect(0,0,56,56);});
     strokes=[]; dirty=false; $("#clDml").textContent=$("#clDdl").textContent="–"; $("#clCml").textContent=$("#clCdl").textContent=""; }
   function seg(a,b){ for(const [c,col] of [[ctx,css("--ink")],[ic,"#fff"]]){ c.lineWidth=18;c.lineCap="round";c.lineJoin="round";c.strokeStyle=col;c.beginPath();c.moveTo(a[0],a[1]);c.lineTo(b[0],b[1]);c.stroke(); } }
