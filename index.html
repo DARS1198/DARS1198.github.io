@@ -46,7 +46,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .tg span.on{color:var(--accent);font-weight:500}
 @media (max-width:820px){.nav{display:none}}
 .tg{white-space:nowrap}
-@media (max-width:520px){.brand span{display:none}}
+@media (max-width:520px){.brand span{display:none}.top .wrap{padding:0 14px;gap:8px}.toggles{gap:4px;min-width:0}.tg,.navcta{padding:5px 7px}}
+@media (max-width:400px){.brand{display:none}.top .wrap{justify-content:flex-end}}
 
 /* hero */
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;padding:72px 0 40px;align-items:center}
@@ -173,6 +174,7 @@ body.filtering .clear{visibility:visible}
 .contact p{margin:0;color:var(--ink-2)}
 @media (max-width:800px){.contact{grid-template-columns:minmax(0,1fr);padding:24px 14px}}
 .contact>*{min-width:0}
+.ccard,.ccard *{min-width:0}.ccard{max-width:100%}.chead span{overflow-wrap:anywhere}
 
 /* contact card — styled as a drawing parts list (hero) / sheet (contact) */
 .ccard{position:relative;margin-top:28px;max-width:540px;border:1px solid var(--ink);background:var(--paper)}
@@ -216,7 +218,7 @@ a.cv:hover{color:var(--accent);background-size:100% 1px}
 .navcta{font-family:var(--mono);font-size:.74rem;padding:6px 10px;background:var(--accent);color:#fff!important;text-decoration:none;border-radius:2px;letter-spacing:.04em;white-space:nowrap}
 .navcta:hover{filter:brightness(1.1)}
 @media (max-width:560px){.crow{grid-template-columns:22px minmax(0,1fr) auto;gap:12px}.crow .cref{display:none}
-  .cgo{display:none}.cv,.ccard.big .cv{font-size:1rem!important;overflow-wrap:normal}.chead{font-size:.6rem;flex-wrap:wrap;gap:4px 8px}.chead span{white-space:nowrap}
+  .cgo{display:none}.cv,.ccard.big .cv{font-size:1rem!important}.chead{font-size:.6rem;flex-wrap:wrap;gap:4px 8px}
   .ccard.big .rows{display:block}
   .ccard.big .crow{grid-template-columns:22px minmax(0,1fr) auto;grid-template-areas:none;align-items:center;padding:12px 14px;gap:12px;border-left:0;border-bottom:0;border-top:1px solid var(--rule)}
   .ccard.big .crow:first-child{border-top:0}

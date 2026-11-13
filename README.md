@@ -1,6 +1,6 @@
 # Diego Adrian Ramirez Salazar — Portfolio / CV
 
-Personal portfolio site: **https://dars1198.github.io/Diego-Adrian-Ramirez-Salazar-/**
+Personal portfolio site: **https://dars1198.github.io**
 
 Robotics & Electronics Engineer (UDEM) — control systems, industrial automation and AI.
 
