@@ -54,8 +54,20 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:22px}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);animation:pulse 2.4s infinite}
 @keyframes pulse{50%{box-shadow:0 0 0 8px transparent}}
-h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,5.4vw,4.4rem);line-height:1.02;letter-spacing:-.02em;margin:0 0 18px}
-h1 em{font-style:italic;color:var(--accent)}
+/* name block — formal: tracked small caps + uppercase surname, dimension-line rule */
+h1.name{margin:0 0 22px;font-family:var(--serif);font-weight:500;line-height:1}
+h1.name .n1{display:block;font-size:clamp(1.05rem,1.9vw,1.4rem);font-variant:small-caps;letter-spacing:.32em;color:var(--ink-2);margin:0 0 10px 2px}
+h1.name .n2{display:block;font-size:clamp(2.5rem,11vw,4.7rem);text-transform:uppercase;letter-spacing:.015em;line-height:.98}
+h1.name .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.06em}
+h1.name .w>span{display:inline-block;transform:translateY(105%);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+h1.name .n1 .w>span{animation-delay:.05s}h1.name .n2 .w:nth-child(1)>span{animation-delay:.18s}h1.name .n2 .w:nth-child(2)>span{animation-delay:.3s}
+@keyframes rise{to{transform:none}}
+.namerule{display:block;position:relative;height:14px;margin:18px 0 0;max-width:520px}
+.namerule i{position:absolute;left:0;right:0;top:6px;height:1.5px;background:var(--accent);transform:scaleX(0);transform-origin:left;animation:draw 1.1s .55s cubic-bezier(.2,.7,.2,1) forwards}
+.namerule::before,.namerule::after{content:"";position:absolute;top:0;width:1.5px;height:14px;background:var(--accent)}
+.namerule::before{left:0}.namerule::after{right:0;opacity:0;animation:fade .3s 1.5s forwards}
+.namerule span{position:absolute;right:0;top:-16px;font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;color:var(--ink-3);opacity:0;animation:fade .4s 1.5s forwards}
+@keyframes draw{to{transform:scaleX(1)}}@keyframes fade{to{opacity:1}}
 .role{font-family:var(--serif);font-size:1.35rem;margin:0 0 6px}
 .tagline{color:var(--ink-2);margin:0 0 28px;max-width:34em}
 .cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
@@ -87,6 +99,7 @@ h1 em{font-style:italic;color:var(--accent)}
 @media (max-width:900px){.hero{grid-template-columns:1fr;padding-top:44px}.simwrap{max-width:560px}}
 /* multi-simulation frame */
 .simwrap{min-width:0}
+.simwrap .drawing{margin:0}
 .simtabs{display:flex;border:1px solid var(--rule);border-bottom:0;font-family:var(--mono);font-size:.7rem;letter-spacing:.05em;overflow-x:auto;scrollbar-width:none}
 .simtabs::-webkit-scrollbar{display:none}
 .simtab{flex:1 0 auto;padding:8px 12px;border-left:1px solid var(--rule);color:var(--ink-3);text-transform:uppercase;white-space:nowrap;text-align:left;transition:color .15s,background .15s}
@@ -280,7 +293,7 @@ footer{padding:40px 0 48px}
 @media (max-width:760px){.tblock{grid-template-columns:1fr 1fr}.tblock>div{border-left:0;border-top:1px solid var(--ink)}.tblock>div:first-child{grid-column:1/-1;border-top:0}}
 .fine{margin-top:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}h1.name .w>span{transform:none}.namerule i{transform:none}.namerule::after,.namerule span{opacity:1}}
 
 /* print = clean CV */
 @media print{
@@ -289,7 +302,7 @@ footer{padding:40px 0 48px}
   .ccard{border:0;margin-top:4pt}.ccard::before,.ccard::after,.chead,.cfoot,.cref,.cico,.cact{display:none!important}.crow{padding:1pt 0;border:0;grid-template-columns:1fr}.ck{display:inline;margin-right:6pt}.cbody{flex-direction:row}
   body{background:#fff;color:#000;font-size:10.5pt}
   .hero{grid-template-columns:1fr;padding:0 0 8pt}
-  h1{font-size:24pt;margin:0 0 4pt}
+  h1.name .n2{font-size:24pt}h1.name .n1{font-size:12pt;margin:0}.namerule{display:none}h1.name .w>span{transform:none!important}
   section{padding:10pt 0;break-inside:avoid-page}
   .cols{grid-template-columns:1fr}
   .stat .v{font-size:18pt}
@@ -322,7 +335,11 @@ footer{padding:40px 0 48px}
   <div class="hero">
     <div>
       <div class="eyebrow"><span class="dot" aria-hidden="true"></span><span class="mono" data-i="now"></span></div>
-      <h1>Diego Adrian<br>Ramirez <em>Salazar</em></h1>
+      <h1 class="name" aria-label="Diego Adrian Ramirez Salazar">
+        <span class="n1" aria-hidden="true"><span class="w"><span>Diego Adrian</span></span></span>
+        <span class="n2" aria-hidden="true"><span class="w"><span>Ramirez</span></span> <span class="w"><span>Salazar</span></span></span>
+        <span class="namerule" aria-hidden="true"><i></i><span>ING. · UDEM</span></span>
+      </h1>
       <p class="role" data-i="role"></p>
       <p class="tagline" data-i="tagline"></p>
       <div class="cta">
