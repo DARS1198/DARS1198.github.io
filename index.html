@@ -148,6 +148,11 @@ h1.name .n1 .w>span{animation-delay:.05s}h1.name .n2 .w:nth-child(1)>span{animat
 .cl-card .k{grid-column:1/-1;font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;color:var(--ink-3);text-transform:uppercase}
 .cl-card .d{font-family:var(--serif);font-size:2rem;line-height:1.1;color:var(--accent)}
 .cl-card .c{font-family:var(--mono);font-size:.6rem;color:var(--ink-2)}
+.cl-card .s{grid-column:1/-1;font-family:var(--mono);font-size:.56rem;color:var(--ink-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cl-card.mine{background:var(--accent-soft);box-shadow:inset 0 0 0 1.5px var(--accent)}
+.cl-card.mine .k{color:var(--ink)}
+.cl-card .k em{font-style:normal;background:var(--accent);color:#fff;padding:1px 5px;border-radius:2px;margin-right:2px;letter-spacing:.08em}
+.cl-card:not(.mine) .d{color:var(--ink-2)}
 .cl-step span,.cl-card .k{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
 @media (max-width:560px){.cl{inset:26px 8px 30px;gap:6px}.cl-top{gap:8px}.cl-card{padding:4px 8px}.cl-card .d{font-size:1.4rem}.cl-step{font-size:.48rem}.cl-pipe{gap:2px 6px}.cl-step canvas{margin-top:1px;width:min(100%,64px)}.cl-card .k{font-size:.5rem}}
 @media (max-width:560px){
@@ -394,8 +399,8 @@ footer{padding:40px 0 48px}
               </div>
             </div>
             <div class="cl-res">
-              <div class="cl-card"><span class="k" data-cl="kml"></span><span class="d" id="clDml">–</span><span class="c" id="clCml"></span></div>
-              <div class="cl-card"><span class="k" data-cl="kdl"></span><span class="d" id="clDdl">–</span><span class="c" id="clCdl"></span></div>
+              <div class="cl-card"><span class="k" data-cl="kml"></span><span class="d" id="clDml">–</span><span class="c" id="clCml"></span><span class="s" data-cl="sml"></span></div>
+              <div class="cl-card mine"><span class="k"><em data-cl="tag"></em> <span data-cl="kdl"></span></span><span class="d" id="clDdl">–</span><span class="c" id="clCdl"></span><span class="s" data-cl="sdl"></span></div>
             </div>
           </div>
         </div>
@@ -859,9 +864,9 @@ const SIM_META = {
   mnist:{n:"02", tab:{es:"Dígitos",en:"Digits"}, tl:{es:"FIG. 02 — CNN MNIST / MODELO REAL",en:"FIG. 02 — MNIST CNN / REAL MODEL"},
          bl:{es:"DIBUJA UN DÍGITO DEL 0 AL 9",en:"DRAW A DIGIT FROM 0 TO 9"}, br:{es:"11,436 PARÁMETROS",en:"11,436 PARAMS"}, btn:{es:"Borrar",en:"Clear"},
          cap:{es:"<b>Mi red entrenada (Keras)</b> corriendo en tu navegador, sin servidor. El recuadro 28×28 es lo que ve el modelo.",en:"<b>My trained network (Keras)</b> running in your browser, no server. The 28×28 box is what the model sees."}},
-  clf:  {n:"03", tab:{es:"Clasificación",en:"Classifier"}, tl:{es:"FIG. 03 — ML CLÁSICO vs DEEP LEARNING",en:"FIG. 03 — CLASSICAL ML vs DEEP LEARNING"},
+  clf:  {n:"03", tab:{es:"Clasificación",en:"Classifier"}, tl:{es:"FIG. 03 — MI CNN vs REGRESIÓN LOGÍSTICA",en:"FIG. 03 — MY CNN vs LOGISTIC REGRESSION"},
          bl:{es:"DIBUJA UN DÍGITO Y COMPARA",en:"DRAW A DIGIT AND COMPARE"}, br:{es:"PREPROCESAMIENTO TIPO OPENCV",en:"OPENCV-STYLE PREPROCESSING"}, btn:{es:"Borrar",en:"Clear"},
-         cap:{es:"<b>Mismo dibujo, dos enfoques</b>: regresión logística (Scikit-Learn) sobre 64 features vs. mi CNN. El clásico se entrenó para esta demo con el dataset digits de Scikit-Learn.",en:"<b>Same drawing, two approaches</b>: logistic regression (Scikit-Learn) on 64 features vs. my CNN. The classical model was trained for this demo on Scikit-Learn's digits dataset."}},
+         cap:{es:"<b>Mi CNN vs. una regresión logística típica</b> con el mismo dibujo. La CNN es el modelo que entrené yo; la regresión logística es una referencia estándar de Scikit-Learn, entrenada para esta demo con su dataset digits.",en:"<b>My CNN vs. a standard logistic regression</b> on the same drawing. The CNN is the model I trained; the logistic regression is a standard Scikit-Learn baseline, trained for this demo on its digits dataset."}},
   slam: {n:"04", tab:{es:"SLAM",en:"SLAM"}, tl:{es:"FIG. 04 — SLAM / LIDAR 2D",en:"FIG. 04 — SLAM / 2D LIDAR"},
          bl:{es:"HAZ CLIC PARA ENVIAR EL ROBOT",en:"CLICK TO SEND THE ROBOT"}, br:null, btn:{es:"Reiniciar",en:"Reset"},
          cap:{es:"<b>Simulación ilustrativa</b>: un robot construye un mapa de ocupación con su lidar mientras navega.",en:"<b>Illustrative simulation</b>: a robot builds an occupancy map with its lidar as it navigates."}},
@@ -1058,7 +1063,8 @@ $("#simBtn").addEventListener("click",()=>SIM.hooks[SIM.active]?.reset?.());
   const S=[1,2,3,4].map(i=>$("#clS"+i).getContext("2d"));
   let drawing=false,last=null,strokes=[],lastRun=0,dirty=false;
   const L={s1:{es:"1 · Grises",en:"1 · Grayscale"},s2:{es:"2 · Binarizado",en:"2 · Threshold"},s3:{es:"3 · Recorte 32×32",en:"3 · Crop 32×32"},s4:{es:"4 · Features 8×8",en:"4 · 8×8 features"},
-           kml:{es:"ML clásico · Reg. logística",en:"Classical ML · Logistic reg."},kdl:{es:"Deep learning · CNN",en:"Deep learning · CNN"}};
+           kml:{es:"Regresión logística típica",en:"Standard logistic regression"},sml:{es:"Referencia · Scikit-Learn",en:"Baseline · Scikit-Learn"},
+           tag:{es:"MÍA",en:"MINE"},kdl:{es:"Mi CNN",en:"My CNN"},sdl:{es:"Entrenada por mí · Keras",en:"Trained by me · Keras"}};
   function clear(){ ctx.clearRect(0,0,280,280); ic.fillStyle="#000"; ic.fillRect(0,0,280,280); S.forEach(s=>{s.fillStyle="#000";s.fillRect(0,0,56,56);});
     strokes=[]; dirty=false; $("#clDml").textContent=$("#clDdl").textContent="–"; $("#clCml").textContent=$("#clCdl").textContent=""; }
   function seg(a,b){ for(const [c,col] of [[ctx,css("--ink")],[ic,"#fff"]]){ c.lineWidth=18;c.lineCap="round";c.lineJoin="round";c.strokeStyle=col;c.beginPath();c.moveTo(a[0],a[1]);c.lineTo(b[0],b[1]);c.stroke(); } }
