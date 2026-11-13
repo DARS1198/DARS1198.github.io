@@ -980,9 +980,10 @@ $("#simBtn").addEventListener("click",()=>SIM.hooks[SIM.active]?.reset?.());
         if(world[gy*GW+gx]){ known[gy*GW+gx]=2; h=true; break; } if(known[gy*GW+gx]!==2) known[gy*GW+gx]=1; }
       rays.push([hx,hy,h]); } return rays; }
   function step(){
+    if(!goal && !auto) return;                    // user took control: wait for the next click
     let tgt=goal; if(!tgt){ tgt={x:WPS[wp][0],y:WPS[wp][1]}; }
     const dx=tgt.x-bot.x, dy=tgt.y-bot.y, dist=Math.hypot(dx,dy);
-    if(dist<8){ if(goal){goal=null;} wp=(wp+1)%WPS.length; return; }
+    if(dist<8){ if(goal){goal=null;} else wp=(wp+1)%WPS.length; return; }
     const want=Math.atan2(dy,dx);
     for(const off of [0,.45,-.45,.9,-.9,1.4,-1.4,2,-2,2.6,-2.6]){ const a=want+off, nx=bot.x+Math.cos(a)*1.8, ny=bot.y+Math.sin(a)*1.8;
       if(!hit(nx,ny,7)){ bot.x=nx; bot.y=ny; let da=a-bot.a; da=Math.atan2(Math.sin(da),Math.cos(da)); bot.a+=da*.25; break; } }
@@ -1001,7 +1002,7 @@ $("#simBtn").addEventListener("click",()=>SIM.hooks[SIM.active]?.reset?.());
     c.beginPath(); c.moveTo(bot.x,bot.y); c.lineTo(bot.x+Math.cos(bot.a)*12,bot.y+Math.sin(bot.a)*12); c.strokeStyle=acc; c.stroke();
     $("#simBR").textContent=(lang==="es"?"MAPA ":"MAP ")+pct()+"%";
   }
-  cv.addEventListener("click",e=>{ const r=cv.getBoundingClientRect(); goal={x:(e.clientX-r.left)*520/r.width,y:(e.clientY-r.top)*480/r.height}; });
+  cv.addEventListener("click",e=>{ const r=cv.getBoundingClientRect(); goal={x:(e.clientX-r.left)*520/r.width,y:(e.clientY-r.top)*480/r.height}; auto=false; });
   const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
   function tick(){ if(SIM.active==="slam"){ if(!reduce) for(let i=0;i<2;i++) step(); draw(scan()); } requestAnimationFrame(tick); }
   reset(); requestAnimationFrame(tick);
