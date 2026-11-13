@@ -349,7 +349,7 @@ footer{padding:40px 0 48px}
   <!-- HERO -->
   <div class="hero">
     <div>
-      <div class="eyebrow"><span class="dot" aria-hidden="true"></span><span class="mono" data-i="now">Ahora · Ingeniero de Proyectos · PESS</span></div>
+      <div class="eyebrow"><span class="dot" aria-hidden="true"></span><span class="mono" data-i="now">En proyecto · C.C. Presidente Juárez, Rosarito, B.C.</span></div>
       <h1 class="name" aria-label="Diego Adrian Ramirez Salazar">
         <span class="n1" aria-hidden="true"><span class="w"><span>Diego Adrian</span></span></span>
         <span class="n2" aria-hidden="true"><span class="w"><span>Ramirez</span></span> <span class="w"><span>Salazar</span></span></span>
@@ -501,11 +501,16 @@ footer{padding:40px 0 48px}
       <span class="cact"><a class="cgo" href="https://wa.me/528186543786" target="_blank" rel="noopener" aria-label="Abrir WhatsApp" title="Abrir"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span>
     </div><div class="crow">
       <span class="cref">C.04</span>
+      <svg class="cico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18"></rect><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"></path></svg>
+      <span class="cbody"><span class="ck">LinkedIn</span><a class="cv" href="https://www.linkedin.com/in/diego-adrian-ramírez-salazar-b7b1b9273" target="_blank" rel="noopener">linkedin.com/in/diego-adrian-ramírez-salazar</a></span>
+      <span class="cact"><a class="cgo" href="https://www.linkedin.com/in/diego-adrian-ramírez-salazar-b7b1b9273" target="_blank" rel="noopener" aria-label="Abrir LinkedIn" title="Abrir"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span>
+    </div><div class="crow">
+      <span class="cref">C.05</span>
       <svg class="cico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.3 4.3 0 00-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 00-6 0C6.8 2.8 5.8 3.1 5.8 3.1a4.3 4.3 0 00-.1 3.2A4.6 4.6 0 004.4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"></path></svg>
       <span class="cbody"><span class="ck">GitHub</span><a class="cv" href="https://github.com/DARS1198" target="_blank" rel="noopener">github.com/DARS1198</a></span>
       <span class="cact"><a class="cgo" href="https://github.com/DARS1198" target="_blank" rel="noopener" aria-label="Abrir GitHub" title="Abrir"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span>
     </div><div class="crow">
-      <span class="cref">C.05</span>
+      <span class="cref">C.06</span>
       <svg class="cico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
       <span class="cbody"><span class="ck">Ubicación</span><span class="cv">Monterrey, N.L., México · disponible para reubicación o remoto</span></span>
       <span class="cact"></span>
@@ -538,7 +543,7 @@ const CONFIG = {
   showPhone: true,
   whatsapp: true,
   github: "https://github.com/DARS1198",            // set false if this number has no WhatsApp
-  linkedin: "",              // e.g. "https://www.linkedin.com/in/your-handle" — row hidden while empty
+  linkedin: "https://www.linkedin.com/in/diego-adrian-ramírez-salazar-b7b1b9273",              // e.g. "https://www.linkedin.com/in/your-handle" — row hidden while empty
   pdf: { es: "CV_Diego_Ramirez_Salazar.pdf", en: "" },   // e.g. "cv-es.pdf" — button hidden while empty
   rev: "2026-11"             // shown in footer title block
 };
@@ -547,7 +552,7 @@ const T = {
   brandRole:{es:"Robótica · Control · IA",en:"Robotics · Control · AI"},
   navAbout:{es:"Perfil",en:"Profile"}, navExp:{es:"Experiencia",en:"Experience"},
   navProj:{es:"Proyectos",en:"Projects"}, navSkills:{es:"Habilidades",en:"Skills"}, navContact:{es:"Contacto",en:"Contact"},
-  now:{es:"Ahora · Ingeniero de Proyectos · PESS",en:"Now · Project Engineer · PESS"},
+  now:{es:"En proyecto · C.C. Presidente Juárez, Rosarito, B.C.",en:"On project · Presidente Juárez plant, Rosarito, B.C."},
   role:{es:"Ingeniero en Robótica, Control e IA",en:"Robotics, Control & AI Engineer"},
   tagline:{es:"Sistemas de control, automatización industrial e inteligencia artificial. Controles de turbina GE Mark V/VI/VIe, SCADA y redes industriales en plantas de generación de México y EE.UU.",
            en:"Control systems, industrial automation and artificial intelligence. GE Mark V/VI/VIe turbine controls, SCADA and industrial networks at power plants in Mexico and the US."},
@@ -734,7 +739,7 @@ function render(){
     {k:"kEmail",v:CONFIG.email,href:"mailto:"+CONFIG.email,copy:CONFIG.email},
     CONFIG.showPhone && {k:"kPhone",v:CONFIG.phone,href:"tel:"+CONFIG.phoneTel,copy:CONFIG.phone},
     CONFIG.showPhone && CONFIG.whatsapp && {k:"kWa",v:T.waOpen[lang],href:"https://wa.me/"+CONFIG.phoneTel.replace(/\D/g,""),ext:1},
-    CONFIG.linkedin && {k:"kLi",v:CONFIG.linkedin.replace(/^https?:\/\/(www\.)?/,""),href:CONFIG.linkedin,ext:1},
+    CONFIG.linkedin && {k:"kLi",v:"linkedin.com/in/"+CONFIG.linkedin.split("/in/")[1].split("-").slice(0,-1).join("-"),href:CONFIG.linkedin,ext:1},
     CONFIG.github && {k:"kGh",v:CONFIG.github.replace("https://",""),href:CONFIG.github,ext:1},
     {k:"kLoc",v:T.loc[lang]}
   ].filter(Boolean);
