@@ -3,8 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Diego Adrian Ramirez Salazar — Robotics & Control Engineer</title>
-<meta name="description" content="Robotics & Electronics Engineer — control systems, industrial automation and AI. Ingeniero en Robótica y Electrónica.">
+<title>Diego Adrian Ramirez Salazar — Robotics, Control & AI Engineer</title>
+<meta name="description" content="Robotics, Control & AI Engineer — GE Mark V/VI/VIe turbine controls, SCADA and industrial networks at power plants in Mexico and the US.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dars1198.github.io/">
+<meta property="og:title" content="Diego Adrian Ramirez Salazar — Robotics, Control & AI Engineer">
+<meta property="og:description" content="GE Mark V/VI/VIe turbine controls, SCADA and industrial networks at power plants in Mexico and the US. Portfolio / CV (ES · EN).">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23ff6a3d' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -177,8 +182,8 @@ section{padding:56px 0}
 .lead p:first-child::first-letter{font-size:3.4em;float:left;line-height:.9;padding:6px 10px 0 0;color:var(--accent);font-weight:500}
 
 /* stats */
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));border-top:1px solid var(--ink);border-left:1px solid var(--rule)}
-.stat{padding:22px 20px 24px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.stats{display:flex;flex-wrap:wrap;border-top:1px solid var(--ink);border-left:1px solid var(--rule)}
+.stat{flex:1 1 190px;padding:22px 20px 24px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .stat .v{font-family:var(--serif);font-size:3rem;line-height:1;letter-spacing:-.02em;font-weight:500}
 .stat .v small{font-size:.45em;color:var(--accent);margin-left:2px}
 .stat .k{margin-top:12px;font-size:.88rem;color:var(--ink-2)}
@@ -324,16 +329,16 @@ footer{padding:40px 0 48px}
 
 <header class="top">
   <div class="wrap">
-    <div class="brand">D.R.S. <b>/</b> <span data-i="brandRole"></span></div>
+    <div class="brand">D.R.S. <b>/</b> <span data-i="brandRole">Robótica · Control · IA</span></div>
     <nav class="nav" aria-label="Sections">
-      <a href="#about" data-i="navAbout"></a>
-      <a href="#experience" data-i="navExp"></a>
-      <a href="#projects" data-i="navProj"></a>
-      <a href="#skills" data-i="navSkills"></a>
-      <a href="#contact" data-i="navContact"></a>
+      <a href="#about" data-i="navAbout">Perfil</a>
+      <a href="#experience" data-i="navExp">Experiencia</a>
+      <a href="#projects" data-i="navProj">Proyectos</a>
+      <a href="#skills" data-i="navSkills">Habilidades</a>
+      <a href="#contact" data-i="navContact">Contacto</a>
     </nav>
     <div class="toggles">
-      <a class="navcta" href="#contact" data-i="navCta"></a>
+      <a class="navcta" href="#contact" data-i="navCta">Contacto</a>
       <button class="tg" id="langBtn" aria-label="Cambiar idioma / Switch language"><span data-l="es">ES</span> · <span data-l="en">EN</span></button>
       <button class="tg" id="themeBtn" aria-label="Toggle theme">◐</button>
     </div>
@@ -344,17 +349,17 @@ footer{padding:40px 0 48px}
   <!-- HERO -->
   <div class="hero">
     <div>
-      <div class="eyebrow"><span class="dot" aria-hidden="true"></span><span class="mono" data-i="now"></span></div>
+      <div class="eyebrow"><span class="dot" aria-hidden="true"></span><span class="mono" data-i="now">Ahora · Ingeniero de Proyectos · PESS</span></div>
       <h1 class="name" aria-label="Diego Adrian Ramirez Salazar">
         <span class="n1" aria-hidden="true"><span class="w"><span>Diego Adrian</span></span></span>
         <span class="n2" aria-hidden="true"><span class="w"><span>Ramirez</span></span> <span class="w"><span>Salazar</span></span></span>
         <span class="namerule" aria-hidden="true"><i></i><span>ING. · UDEM</span></span>
       </h1>
-      <p class="role" data-i="role"></p>
-      <p class="tagline" data-i="tagline"></p>
+      <p class="role" data-i="role">Ingeniero en Robótica, Control e IA</p>
+      <p class="tagline" data-i="tagline">Sistemas de control, automatización industrial e inteligencia artificial. Controles de turbina GE Mark V/VI/VIe, SCADA y redes industriales en plantas de generación de México y EE.UU.</p>
       <div class="cta">
-        <a class="btn primary" href="#contact" data-i="contactMe"></a>
-        <a class="btn" href="#experience" data-i="seeWork"></a>
+        <a class="btn primary" href="#contact" data-i="contactMe">Contactarme</a>
+        <a class="btn" href="#experience" data-i="seeWork">Ver experiencia ↓</a>
         <a class="btn" id="pdfBtn" hidden data-i="pdf"></a>
       </div>
       <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -394,67 +399,131 @@ footer{padding:40px 0 48px}
     </div>
   </div>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="sh"><span class="num">01</span><h2 data-i="aboutTitle"></h2><div class="dimline"><span class="ln"></span><span class="lbl" data-i="aboutDim"></span></div></div>
-    <div class="cols">
-      <div class="lead" id="aboutBody"></div>
-      <aside class="side" id="aboutNotes"></aside>
-    </div>
-  </section>
-
   <!-- NUMBERS -->
   <section id="numbers">
-    <div class="sh"><span class="num">02</span><h2 data-i="numTitle"></h2><div class="dimline"><span class="ln"></span><span class="lbl" data-i="numDim"></span></div></div>
-    <div class="stats" id="stats"></div>
+    <div class="sh"><span class="num">01</span><h2 data-i="numTitle">En números</h2><div class="dimline"><span class="ln"></span><span class="lbl" data-i="numDim">RESULTADOS MEDIDOS</span></div></div>
+    <div class="stats" id="stats"><div class="stat"><div class="v">~540</div><div class="k">instrumentos estructurados en una base de datos única para la migración a Mark VIe</div><div class="src mono">CERRO PRIETO U10</div></div><div class="stat"><div class="v">−50<small>%</small></div><div class="k">tiempo de timbrado, desconexión y conexión vs. el proyecto anterior</div><div class="src mono">EQUIPO DE 7</div></div><div class="stat"><div class="v">−70<small>%</small></div><div class="k">tiempo de configuración de thin clients, automatizado en Python</div><div class="src mono">PESS</div></div><div class="stat"><div class="v">840<small>MW</small></div><div class="k">planta de ciclo combinado donde participé en inspección robótica del generador</div><div class="src mono">CONNECTICUT, USA</div></div><div class="stat"><div class="v">30+<small>s</small></div><div class="k">retrasos DNP3 aislados con Wireshark y Python; se descartó falla en planta</div><div class="src mono">UTR · OPERADOR DE RED</div></div></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="sh"><span class="num">02</span><h2 data-i="aboutTitle">Del gabinete a los datos</h2><div class="dimline"><span class="ln"></span><span class="lbl" data-i="aboutDim">PERFIL</span></div></div>
+    <div class="cols">
+      <div class="lead" id="aboutBody"><p>Soy Ingeniero en Tecnología Electrónica y Robótica por la UDEM. Desde abril de 2025 trabajo en plantas de generación eléctrica en México y EE.UU., actualizando y manteniendo controles de turbina GE Mark V/VI/VIe y PLCs GE y Siemens, con pantallas en CIMPLICITY e instrumentación 4-20 mA/HART.</p><p>Mi trabajo va del gabinete a los datos: estructuro la ingeniería de planta como referencia única de un proyecto, diseño formatos de verificación que reducen tiempos de conexionado, diagnostico redes industriales con Wireshark y Python, y automatizo tareas repetitivas para eliminar errores manuales.</p><p>La optimización de procesos requiere datos confiables y criterio analítico. Complemento la experiencia en campo con formación en control PID y difuso, MATLAB/Simulink y una especialización en Inteligencia Artificial (TensorFlow, PyTorch, Scikit-Learn), que me interesa aplicar a la optimización de procesos, la eficiencia energética y la robótica.</p></div>
+      <aside class="side" id="aboutNotes"><div class="note"><b>GE Mark VIe</b>Plataforma de control de GE para turbinas de gas y vapor: protección, secuencias y regulación de la unidad.</div><div class="note"><b>4-20 mA / HART</b>Lazo analógico estándar de instrumentación; HART añade una señal digital sobre el mismo par de cables.</div><div class="note"><b>SCADA</b>Supervisión y adquisición de datos: cómo una planta o un operador de red ve y controla equipos a distancia.</div></aside>
+    </div>
   </section>
 
   <!-- EXPERIENCE -->
   <section id="experience">
-    <div class="sh"><span class="num">03</span><h2 data-i="expTitle"></h2><div class="dimline"><span class="ln"></span><span class="lbl">2025 — <span data-i="present"></span></span></div></div>
+    <div class="sh"><span class="num">03</span><h2 data-i="expTitle">Experiencia profesional</h2><div class="dimline"><span class="ln"></span><span class="lbl">2025 — <span data-i="present">PRESENTE</span></span></div></div>
     <div class="cols">
-      <div id="jobs"></div>
-      <aside class="side" id="expNotes"></aside>
+      <div id="jobs">
+    <article class="job">
+      <div class="when">ABR 2025 — PRESENTE<span class="where">Plantas de generación eléctrica · México / EE.UU.</span></div>
+      <div>
+        <h3>Ingeniero de Proyectos</h3><div class="org">PESS — Power Engineering Services and Solutions</div>
+        <ul><li data-tags="Mark V/VI/VIe|PLC|CIMPLICITY|Historian|HART">Actualización y mantenimiento de controles de turbina <strong>GE Mark V, VI y VIe</strong> y PLCs GE/Siemens; tags y pantallas en CIMPLICITY con historian; instrumentación 4-20 mA/HART.</li><li data-tags="ELCID"><strong>Proyecto internacional (EE.UU., may 2025):</strong> inspección robótica in-situ del generador de Lake Road Generating Plant (840 MW, ciclo combinado, Connecticut) con prueba ELCID del núcleo del estator e inspección del devanado; se confirmó buen estado del equipo.</li><li data-tags="DNP3|Modbus|TCP/IP|Wireshark|Python">Mantenimiento de UTRs enlazadas al operador de red (DNP3, Modbus, TCP/IP); con <strong>Wireshark y Python</strong> aislé paquetes DNP3 periódicos (8 s) retrasados 30+ s y demostré que el origen era externo a la planta, descartando falla en planta.</li><li data-tags="Visio">Ingeniería, armado y conexionado de gabinetes de control y CCM de baja tensión; modelado a escala en Visio.</li><li data-tags="Python">Automaticé en <strong>Python</strong> el setup de thin clients: <strong>−70%</strong> en tiempo de configuración y equipos uniformes sin errores manuales.</li></ul>
+        <div class="sub"><span class="mono">NOV 2026</span><h4>Coordinación en sitio y contacto con el cliente</h4><div class="org">C.C. Presidente Juárez, Rosarito, B.C.</div><ul><li data-tags="">Principal contacto con el cliente: reportes diarios de avance, registro de actividades y horas trabajadas, e inspecciones de seguridad en áreas de trabajo.</li></ul></div><div class="sub"><span class="mono">SEP — NOV 2026</span><h4>Migración Mitsubishi → GE Mark VIe (TMR)</h4><div class="org">Cerro Prieto U10, Mexicali</div><ul><li data-tags="Excel">Diseñé formatos de verificación de conexiones pre/post migración a partir de la ingeniería de planta, reduciendo <strong>~50%</strong> el tiempo de timbrado, desconexión y conexión respecto al proyecto anterior (equipo de 7).</li><li data-tags="Excel">Estructuré la ingeniería de planta en una base de datos (Excel) de <strong>~540 instrumentos</strong> (descripción, ubicación, tarjeta, terminales), referencia única del proyecto.</li><li data-tags="Mark V/VI/VIe">Documenté el as-found, timbré y etiqueté señales; desconecté el sistema heredado y conecté el Mark VIe y su red TMR.</li><li data-tags="">Investigué y propuse mitigaciones al ambiente corrosivo (thin clients y neutralización de H₂S) para maximizar la disponibilidad de equipos; <strong>propuesta aprobada e implementada</strong>.</li><li data-tags="ToolboxST">Realicé pruebas funcionales en GE ToolboxST simulando la operación del sistema previo al arranque.</li></ul></div>
+      </div>
+    </article></div>
+      <aside class="side" id="expNotes"><div class="note"><b>TMR</b>Triple Modular Redundancy: tres controladores calculan en paralelo y votan; una falla no detiene la turbina.</div><div class="note"><b>DNP3</b>Protocolo SCADA usado por operadores de red eléctrica para leer y comandar unidades remotas (UTR).</div><div class="note"><b>ELCID</b>Prueba electromagnética que detecta fallas de aislamiento entre laminaciones del núcleo del estator.</div></aside>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects">
-    <div class="sh"><span class="num">04</span><h2 data-i="projTitle"></h2><div class="dimline"><span class="ln"></span><span class="lbl">UDEM · 2023 — 2026</span></div></div>
-    <div class="projects" id="projList"></div>
+    <div class="sh"><span class="num">04</span><h2 data-i="projTitle">Proyectos de IA y robótica</h2><div class="dimline"><span class="ln"></span><span class="lbl">2023 — 2026</span></div></div>
+    <div class="projects" id="projList">
+    <article class="proj" data-tags="TensorFlow|Keras|TensorFlow.js|JavaScript|Python">
+      <div class="pn">P.01</div><h3>Reconocedor de dígitos — CNN en el navegador</h3><div class="ctx">Proyecto personal · 2026</div>
+      <p>Red convolucional entrenada en MNIST con Keras, convertida a TensorFlow.js y ejecutada 100% en el cliente: dibujas un dígito y se clasifica en tiempo real. 11,436 parámetros (~45 KB) y el mismo preprocesamiento que MNIST (recorte, escalado a 20×20 y centrado por centro de masa).</p>
+      <div class="chips"><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">TensorFlow.js</span><span class="chip">JavaScript</span><span class="chip">Python · avanzado</span></div>
+      <div class="plinks"><button data-gosim="mnist">Probar arriba ↑</button><a href="https://dars1198.github.io/mnist-digit-recognizer-tfjs/" target="_blank" rel="noopener">Demo en vivo ↗</a><a href="https://github.com/DARS1198/mnist-digit-recognizer-tfjs" target="_blank" rel="noopener">Código ↗</a></div>
+    </article>
+    <article class="proj" data-tags="TensorFlow|PyTorch|Keras|Scikit-Learn|OpenCV|Python">
+      <div class="pn">P.02</div><h3>Clasificación de imágenes con redes neuronales</h3><div class="ctx">Especialización en IA, UDEM</div>
+      <p>Comparación de ML clásico (Scikit-Learn) y deep learning (TensorFlow, PyTorch, Keras) con preprocesamiento en OpenCV.</p>
+      <div class="chips"><span class="chip">TensorFlow</span><span class="chip">PyTorch</span><span class="chip">Keras</span><span class="chip">Scikit-Learn</span><span class="chip">Visión computacional (OpenCV)</span><span class="chip">Python · avanzado</span></div>
+      
+    </article>
+    <article class="proj" data-tags="SLAM|Python|Linux">
+      <div class="pn">P.03</div><h3>Navegación autónoma y SLAM</h3><div class="ctx">Robótica Avanzada, UDEM</div>
+      <p>Implementación de localización y mapeo simultáneo (SLAM) para la navegación autónoma de un robot móvil.</p>
+      <div class="chips"><span class="chip">SLAM</span><span class="chip">Python · avanzado</span><span class="chip">Linux</span></div>
+      <div class="plinks"><button data-gosim="slam">Probar arriba ↑</button></div>
+    </article>
+    <article class="proj" data-tags="Cinemática|MATLAB/Simulink|Fusion 360">
+      <div class="pn">P.04</div><h3>Brazo robótico de 4 ejes rotativos (R,R,R,R)</h3><div class="ctx">Ago — Nov 2023 · FIG. 01</div>
+      <p>Cinemática directa/inversa y control en Simulink; diseño en Fusion 360, impresión 3D y motores brushless. El dibujo de arriba usa la misma idea de cinemática inversa.</p>
+      <div class="chips"><span class="chip">Cinemática</span><span class="chip">MATLAB/Simulink</span><span class="chip">Fusion 360</span></div>
+      <div class="plinks"><button data-gosim="arm">Probar arriba ↑</button></div>
+    </article></div>
   </section>
 
   <!-- SKILLS -->
   <section id="skills">
-    <div class="sh"><span class="num">05</span><h2 data-i="skillsTitle"></h2><div class="dimline"><span class="ln"></span><span class="lbl" data-i="skillsDim"></span></div></div>
-    <p class="skillhelp"><span data-i="skillsHelp"></span><button class="clear" id="clearFilter" data-i="clear"></button></p>
-    <div id="skillList"></div>
+    <div class="sh"><span class="num">05</span><h2 data-i="skillsTitle">Habilidades técnicas</h2><div class="dimline"><span class="ln"></span><span class="lbl" data-i="skillsDim">FILTRO INTERACTIVO</span></div></div>
+    <p class="skillhelp"><span data-i="skillsHelp">Haz clic en una herramienta marcada con ↗ para resaltar dónde la he usado.</span><button class="clear" id="clearFilter" data-i="clear">× quitar filtro</button></p>
+    <div id="skillList">
+    <div class="sgroup"><h4>Control industrial</h4><div><button class="sk" data-skill="Mark V/VI/VIe" data-has="1">GE Mark V/VI/VIe (TMR)</button><button class="sk" data-skill="ToolboxST" data-has="1">ToolboxST</button><button class="sk" data-skill="PLC" data-has="1">PLCs (GE, Siemens)</button><button class="sk" data-skill="CIMPLICITY" data-has="1">CIMPLICITY</button><button class="sk" data-skill="Historian" data-has="1">Historian</button><button class="sk" data-skill="DNP3" data-has="1">DNP3</button><button class="sk" data-skill="Modbus" data-has="1">Modbus</button><button class="sk" data-skill="TCP/IP" data-has="1">TCP/IP</button><button class="sk" data-skill="Wireshark" data-has="1">Wireshark</button><button class="sk" data-skill="HART" data-has="1">4-20 mA / HART</button><button class="sk" data-skill="ELCID" data-has="1">ELCID</button></div></div>
+    <div class="sgroup"><h4>Control y robótica</h4><div><button class="sk" data-skill="PID / fuzzy" data-has="0" tabindex="-1" aria-disabled="true">PID / difuso</button><button class="sk" data-skill="Cinemática" data-has="1">Cinemática</button><button class="sk" data-skill="SLAM" data-has="1">SLAM</button><button class="sk" data-skill="UR e-Series" data-has="0" tabindex="-1" aria-disabled="true">UR e-Series</button><button class="sk" data-skill="MATLAB/Simulink" data-has="1">MATLAB/Simulink</button></div></div>
+    <div class="sgroup"><h4>IA / Machine Learning</h4><div><button class="sk" data-skill="TensorFlow" data-has="1">TensorFlow</button><button class="sk" data-skill="PyTorch" data-has="1">PyTorch</button><button class="sk" data-skill="Keras" data-has="1">Keras</button><button class="sk" data-skill="Scikit-Learn" data-has="1">Scikit-Learn</button><button class="sk" data-skill="TensorFlow.js" data-has="1">TensorFlow.js</button><button class="sk" data-skill="Deep learning" data-has="0" tabindex="-1" aria-disabled="true">Deep learning</button><button class="sk" data-skill="OpenCV" data-has="1">Visión computacional (OpenCV)</button></div></div>
+    <div class="sgroup"><h4>Programación</h4><div><button class="sk" data-skill="Python" data-has="1">Python · avanzado</button><button class="sk" data-skill="C++" data-has="0" tabindex="-1" aria-disabled="true">C++</button><button class="sk" data-skill="Java" data-has="0" tabindex="-1" aria-disabled="true">Java</button><button class="sk" data-skill="JavaScript" data-has="1">JavaScript</button></div></div>
+    <div class="sgroup"><h4>Embebidos y otros</h4><div><button class="sk" data-skill="Raspberry Pi" data-has="0" tabindex="-1" aria-disabled="true">Raspberry Pi</button><button class="sk" data-skill="Tiva C" data-has="0" tabindex="-1" aria-disabled="true">Tiva C</button><button class="sk" data-skill="Linux" data-has="1">Linux</button><button class="sk" data-skill="Git" data-has="0" tabindex="-1" aria-disabled="true">Git</button><button class="sk" data-skill="Excel" data-has="1">Excel</button><button class="sk" data-skill="Visio" data-has="1">Visio</button><button class="sk" data-skill="NX" data-has="0" tabindex="-1" aria-disabled="true">NX</button><button class="sk" data-skill="Fusion 360" data-has="1">Fusion 360</button></div></div></div>
   </section>
 
   <!-- EDUCATION -->
   <section id="education">
-    <div class="sh"><span class="num">06</span><h2 data-i="eduTitle"></h2><div class="dimline"><span class="ln"></span><span class="lbl">2018 — 2024</span></div></div>
-    <div class="edu" id="eduList"></div>
+    <div class="sh"><span class="num">06</span><h2 data-i="eduTitle">Educación, certificaciones e idiomas</h2><div class="dimline"><span class="ln"></span><span class="lbl">2018 — 2024</span></div></div>
+    <div class="edu" id="eduList"><div><span class="mono">EDUCACIÓN</span><h3>Universidad de Monterrey (UDEM)</h3><p>Ingeniería en Tecnología Electrónica y Robótica · 2018 — 2024 · San Pedro Garza García, N.L.</p></div><div><span class="mono">CERTIFICACIONES</span><h3>Formación continua</h3><ul><li>Protocolos de Comunicación Industrial y Gestión de Redes — Vester Industrial Training Center (2026)</li><li>Modbus Communication Protocol — Udemy (2026)</li><li>DC-3 STPS de seguridad industrial (2025, renovadas 2026): trabajos en altura, espacios confinados, seguridad eléctrica, candadeo y tarjeteo (LOTO), sustancias peligrosas</li><li>Especialización en IA — UDEM</li><li>Universal Robots e-Series Core Track</li><li>MATLAB (2021)</li></ul></div><div><span class="mono">IDIOMAS</span><h3>Español · Inglés</h3><ul><li>Español — nativo</li><li>Inglés — avanzado (C1)</li></ul></div></div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
     <div class="contact">
-      <div><h2 data-i="contactTitle"></h2><p data-i="contactBody"></p></div>
-      <div class="ccard contactRows"></div>
+      <div><h2 data-i="contactTitle">¿Hablamos?</h2><p data-i="contactBody">Automatización, control, robótica e IA aplicada. Escríbeme y platiquemos.</p></div>
+      <div class="ccard contactRows"><div class="chead"><span>Datos de contacto</span><span class="live"><i></i>Contacto directo</span></div>
+      <div class="rows"><div class="crow">
+      <span class="cref">C.01</span>
+      <svg class="cico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"></path><path d="M3 7l9 6 9-6"></path></svg>
+      <span class="cbody"><span class="ck">Correo</span><a class="cv" href="mailto:diego.ramirez@udem.edu">diego.ramirez@<wbr>udem.edu</a></span>
+      <span class="cact"><button class="cp" data-copy="diego.ramirez@udem.edu" aria-label="Copiar Correo" title="Copiar"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12"></rect><path d="M16 8V4H4v12h4"></path></svg></button><a class="cgo" href="mailto:diego.ramirez@udem.edu" aria-label="Abrir Correo" title="Abrir"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span>
+    </div><div class="crow">
+      <span class="cref">C.02</span>
+      <svg class="cico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h4l2 5-2.5 1.5a11 11 0 005 5L16 12l5 2v4a2 2 0 01-2 2A16 16 0 014 5a2 2 0 012-2"></path></svg>
+      <span class="cbody"><span class="ck">Teléfono</span><a class="cv" href="tel:+528186543786">+52 818 654 3786</a></span>
+      <span class="cact"><button class="cp" data-copy="+52 818 654 3786" aria-label="Copiar Teléfono" title="Copiar"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12"></rect><path d="M16 8V4H4v12h4"></path></svg></button><a class="cgo" href="tel:+528186543786" aria-label="Abrir Teléfono" title="Abrir"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span>
+    </div><div class="crow">
+      <span class="cref">C.03</span>
+      <svg class="cico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1112 20a8 8 0 01-4-1.1z"></path><path d="M9 10h6M9 13h4"></path></svg>
+      <span class="cbody"><span class="ck">WhatsApp</span><a class="cv" href="https://wa.me/528186543786" target="_blank" rel="noopener">Enviar mensaje</a></span>
+      <span class="cact"><a class="cgo" href="https://wa.me/528186543786" target="_blank" rel="noopener" aria-label="Abrir WhatsApp" title="Abrir"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span>
+    </div><div class="crow">
+      <span class="cref">C.04</span>
+      <svg class="cico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.3 4.3 0 00-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 00-6 0C6.8 2.8 5.8 3.1 5.8 3.1a4.3 4.3 0 00-.1 3.2A4.6 4.6 0 004.4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"></path></svg>
+      <span class="cbody"><span class="ck">GitHub</span><a class="cv" href="https://github.com/DARS1198" target="_blank" rel="noopener">github.com/DARS1198</a></span>
+      <span class="cact"><a class="cgo" href="https://github.com/DARS1198" target="_blank" rel="noopener" aria-label="Abrir GitHub" title="Abrir"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></span>
+    </div><div class="crow">
+      <span class="cref">C.05</span>
+      <svg class="cico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+      <span class="cbody"><span class="ck">Ubicación</span><span class="cv">Monterrey, N.L., México · disponible para reubicación o remoto</span></span>
+      <span class="cact"></span>
+    </div></div>
+      <div class="cfoot"><span>Monterrey · UTC−6</span><span>Ref. DRS-C-01</span></div></div>
     </div>
   </section>
 </main>
 
 <footer class="wrap">
   <div class="tblock" aria-label="Drawing title block">
-    <div><span class="h" data-i="tbTitle"></span>Diego Adrian Ramirez Salazar — <span data-i="tbDesc"></span></div>
+    <div><span class="h" data-i="tbTitle">TÍTULO</span>Diego Adrian Ramirez Salazar — <span data-i="tbDesc">Portafolio / CV</span></div>
     <div><span class="h">DWG NO.</span>DRS-PF-001</div>
     <div><span class="h">REV</span><span id="rev"></span></div>
-    <div><span class="h" data-i="tbLang"></span><span id="tbLangV"></span></div>
-    <div><span class="h" data-i="tbStatus"></span><span class="ok">● </span><span data-i="tbOk"></span></div>
+    <div><span class="h" data-i="tbLang">IDIOMA</span><span id="tbLangV"></span></div>
+    <div><span class="h" data-i="tbStatus">ESTADO</span><span class="ok">● </span><span data-i="tbOk">VIGENTE</span></div>
   </div>
-  <div class="fine mono"><span data-i="fine1"></span><span data-i="fine2"></span></div>
+  <div class="fine mono"><span data-i="fine1">Sitio estático · sin cookies · sin rastreo</span><span data-i="fine2">Ctrl+P imprime una versión CV</span></div>
 </footer>
 
 <script>
@@ -469,6 +538,7 @@ const CONFIG = {
   showPhone: true,
   whatsapp: true,
   github: "https://github.com/DARS1198",            // set false if this number has no WhatsApp
+  linkedin: "",              // e.g. "https://www.linkedin.com/in/your-handle" — row hidden while empty
   pdf: { es: "CV_Diego_Ramirez_Salazar.pdf", en: "" },   // e.g. "cv-es.pdf" — button hidden while empty
   rev: "2026-11"             // shown in footer title block
 };
@@ -477,22 +547,22 @@ const T = {
   brandRole:{es:"Robótica · Control · IA",en:"Robotics · Control · AI"},
   navAbout:{es:"Perfil",en:"Profile"}, navExp:{es:"Experiencia",en:"Experience"},
   navProj:{es:"Proyectos",en:"Projects"}, navSkills:{es:"Habilidades",en:"Skills"}, navContact:{es:"Contacto",en:"Contact"},
-  now:{es:"Ahora · Project Manager · Rosarito, B.C.",en:"Now · Project Manager · Rosarito, B.C."},
-  role:{es:"Ingeniero en Robótica y Electrónica",en:"Robotics & Electronics Engineer"},
+  now:{es:"Ahora · Ingeniero de Proyectos · PESS",en:"Now · Project Engineer · PESS"},
+  role:{es:"Ingeniero en Robótica, Control e IA",en:"Robotics, Control & AI Engineer"},
   tagline:{es:"Sistemas de control, automatización industrial e inteligencia artificial. Controles de turbina GE Mark V/VI/VIe, SCADA y redes industriales en plantas de generación de México y EE.UU.",
            en:"Control systems, industrial automation and artificial intelligence. GE Mark V/VI/VIe turbine controls, SCADA and industrial networks at power plants in Mexico and the US."},
   navCta:{es:"Contacto",en:"Contact"}, contactMe:{es:"Contactarme",en:"Get in touch"},
-  kEmail:{es:"Correo",en:"Email"}, kPhone:{es:"Teléfono",en:"Phone"}, kWa:{es:"WhatsApp",en:"WhatsApp"}, kLoc:{es:"Ubicación",en:"Location"}, kGh:{es:"GitHub",en:"GitHub"},
+  kEmail:{es:"Correo",en:"Email"}, kPhone:{es:"Teléfono",en:"Phone"}, kWa:{es:"WhatsApp",en:"WhatsApp"}, kLoc:{es:"Ubicación",en:"Location"}, kGh:{es:"GitHub",en:"GitHub"}, kLi:{es:"LinkedIn",en:"LinkedIn"},
   demo:{es:"Demo en vivo ↗",en:"Live demo ↗"}, code:{es:"Código ↗",en:"Code ↗"},
   waOpen:{es:"Enviar mensaje",en:"Send a message"},
-  cHead:{es:"Datos de contacto",en:"Contact details"}, cLive:{es:"Abierto a oportunidades",en:"Open to opportunities"},
+  cHead:{es:"Datos de contacto",en:"Contact details"}, cLive:{es:"Contacto directo",en:"Direct contact"},
   cFootL:{es:"Monterrey · UTC−6",en:"Monterrey · UTC−6"}, cFootR:{es:"Ref. DRS-C-01",en:"Ref. DRS-C-01"},
   openLbl:{es:"Abrir",en:"Open"},
   copy:{es:"Copiar",en:"Copy"}, copiedShort:{es:"✓ Copiado",en:"✓ Copied"},
   copied:{es:"✓ Copiado al portapapeles",en:"✓ Copied to clipboard"},
   copyFail:{es:"Copia manual: ",en:"Copy manually: "},
   seeWork:{es:"Ver experiencia ↓",en:"See experience ↓"}, pdf:{es:"CV en PDF",en:"PDF résumé"},
-  loc:{es:"Monterrey, N.L., México",en:"Monterrey, N.L., Mexico"},
+  loc:{es:"Monterrey, N.L., México · disponible para reubicación o remoto",en:"Monterrey, N.L., Mexico · open to relocation or remote"},
   figHint:{es:"MUEVE EL CURSOR SOBRE EL DIBUJO",en:"MOVE YOUR CURSOR OVER THE DRAWING"},
   trySim:{es:"Probar arriba ↑",en:"Try it above ↑"},
   aboutTitle:{es:"Del gabinete a los datos",en:"From the cabinet to the data"},
@@ -505,7 +575,7 @@ const T = {
   clear:{es:"× quitar filtro",en:"× clear filter"},
   eduTitle:{es:"Educación, certificaciones e idiomas",en:"Education, certifications & languages"},
   contactTitle:{es:"¿Hablamos?",en:"Let's talk"},
-  contactBody:{es:"Abierto a roles en automatización, control, robótica e IA aplicada. Escríbeme y platiquemos.",en:"Open to roles in automation, control, robotics and applied AI. Reach out and let's talk."},
+  contactBody:{es:"Automatización, control, robótica e IA aplicada. Escríbeme y platiquemos.",en:"Automation, control, robotics and applied AI. Reach out and let's talk."},
   tbTitle:{es:"TÍTULO",en:"TITLE"}, tbDesc:{es:"Portafolio / CV",en:"Portfolio / Résumé"},
   tbLang:{es:"IDIOMA",en:"LANGUAGE"}, tbStatus:{es:"ESTADO",en:"STATUS"}, tbOk:{es:"VIGENTE",en:"CURRENT"},
   fine1:{es:"Sitio estático · sin cookies · sin rastreo",en:"Static site · no cookies · no tracking"},
@@ -534,8 +604,7 @@ const NOTES = {
   exp:[
     {k:"TMR",es:"Triple Modular Redundancy: tres controladores calculan en paralelo y votan; una falla no detiene la turbina.",en:"Triple Modular Redundancy: three controllers compute in parallel and vote, so one failure does not trip the turbine."},
     {k:"DNP3",es:"Protocolo SCADA usado por operadores de red eléctrica para leer y comandar unidades remotas (UTR).",en:"SCADA protocol used by grid operators to poll and command remote terminal units (RTUs)."},
-    {k:"ELCID",es:"Prueba electromagnética que detecta fallas de aislamiento entre laminaciones del núcleo del estator.",en:"Electromagnetic test that detects insulation faults between stator-core laminations."},
-    {k:"CENACE",es:"Centro Nacional de Control de Energía: el operador del sistema eléctrico de México.",en:"Mexico's national energy control center — the country's grid operator."}
+    {k:"ELCID",es:"Prueba electromagnética que detecta fallas de aislamiento entre laminaciones del núcleo del estator.",en:"Electromagnetic test that detects insulation faults between stator-core laminations."}
   ]
 };
 
@@ -544,7 +613,7 @@ const STATS = [
   {v:"−50",u:"%",k:{es:"tiempo de timbrado, desconexión y conexión vs. el proyecto anterior",en:"time for loop-checking, disconnection and wiring vs. the previous project"},src:{es:"EQUIPO DE 7",en:"TEAM OF 7"}},
   {v:"−70",u:"%",k:{es:"tiempo de configuración de thin clients, automatizado en Python",en:"thin-client setup time, automated in Python"},src:"PESS"},
   {v:"840",u:"MW",k:{es:"planta de ciclo combinado donde participé en inspección robótica del generador",en:"combined-cycle plant where I took part in a robotic generator inspection"},src:"CONNECTICUT, USA"},
-  {v:"30+",u:"s",k:{es:"retrasos DNP3 aislados con Wireshark y Python; causa externa a la planta demostrada",en:"DNP3 delays isolated with Wireshark and Python; root cause proven external to the plant"},src:"UTR · CENACE"}
+  {v:"30+",u:"s",k:{es:"retrasos DNP3 aislados con Wireshark y Python; se descartó falla en planta",en:"DNP3 delays isolated with Wireshark and Python; plant fault ruled out"},src:{es:"UTR · OPERADOR DE RED",en:"RTU · GRID OPERATOR"}}
 ];
 
 const JOBS = [
@@ -556,14 +625,14 @@ const JOBS = [
     items:[
       {t:["Mark V/VI/VIe","PLC","CIMPLICITY","Historian","HART"],es:"Actualización y mantenimiento de controles de turbina <strong>GE Mark V, VI y VIe</strong> y PLCs GE/Siemens; tags y pantallas en CIMPLICITY con historian; instrumentación 4-20 mA/HART.",en:"Upgraded and maintained <strong>GE Mark V, VI and VIe</strong> turbine controls and GE/Siemens PLCs; tags and HMI screens in CIMPLICITY with historian; 4-20 mA/HART instrumentation."},
       {t:["ELCID"],es:"<strong>Proyecto internacional (EE.UU., may 2025):</strong> inspección robótica in-situ del generador de Lake Road Generating Plant (840 MW, ciclo combinado, Connecticut) con prueba ELCID del núcleo del estator e inspección del devanado; se confirmó buen estado del equipo.",en:"<strong>International project (US, May 2025):</strong> on-site robotic generator inspection at Lake Road Generating Plant (840 MW combined cycle, Connecticut), with an ELCID stator-core test and winding inspection; equipment confirmed in good condition."},
-      {t:["DNP3","Modbus","TCP/IP","Wireshark","Python"],es:"Mantenimiento de UTRs con CENACE (DNP3, Modbus, TCP/IP); con <strong>Wireshark y Python</strong> aislé paquetes DNP3 periódicos (8 s) retrasados 30+ s y demostré que la causa era la falta de solicitud desde CENACE, descartando falla en planta.",en:"Maintained RTUs with CENACE (DNP3, Modbus, TCP/IP); using <strong>Wireshark and Python</strong> I isolated periodic DNP3 packets (8 s) delayed by 30+ s and proved the cause was missing polls from CENACE, ruling out a plant fault."},
+      {t:["DNP3","Modbus","TCP/IP","Wireshark","Python"],es:"Mantenimiento de UTRs enlazadas al operador de red (DNP3, Modbus, TCP/IP); con <strong>Wireshark y Python</strong> aislé paquetes DNP3 periódicos (8 s) retrasados 30+ s y demostré que el origen era externo a la planta, descartando falla en planta.",en:"Maintained RTUs linked to the grid operator (DNP3, Modbus, TCP/IP); using <strong>Wireshark and Python</strong> I isolated periodic DNP3 packets (8 s) delayed by 30+ s and proved the source was external to the plant, ruling out a plant fault."},
       {t:["Visio"],es:"Ingeniería, armado y conexionado de gabinetes de control y CCM de baja tensión; modelado a escala en Visio.",en:"Engineering, assembly and wiring of control cabinets and low-voltage MCCs; scale models in Visio."},
       {t:["Python"],es:"Automaticé en <strong>Python</strong> el setup de thin clients: <strong>−70%</strong> en tiempo de configuración y equipos uniformes sin errores manuales.",en:"Automated thin-client setup in <strong>Python</strong>: <strong>−70%</strong> configuration time and uniform machines with no manual errors."}
     ],
     subs:[
       {
         when:{es:"NOV 2026",en:"NOV 2026"},
-        title:{es:"Project Manager",en:"Project Manager"},
+        title:{es:"Coordinación en sitio y contacto con el cliente",en:"Site coordination & client contact"},
         org:{es:"C.C. Presidente Juárez, Rosarito, B.C.",en:"Presidente Juárez combined-cycle plant, Rosarito, B.C."},
         items:[
           {t:[],es:"Principal contacto con el cliente: reportes diarios de avance, registro de actividades y horas trabajadas, e inspecciones de seguridad en áreas de trabajo.",en:"Main client contact: daily progress reports, activity and labor-hour logs, and safety inspections of work areas."}
@@ -621,8 +690,6 @@ const SKILL_LABEL = { /* labels that differ by language / show level */
   "PID / fuzzy":{es:"PID / difuso",en:"PID / fuzzy"},
   "Mark V/VI/VIe":{es:"GE Mark V/VI/VIe (TMR)",en:"GE Mark V/VI/VIe (TMR)"},
   "Python":{es:"Python · avanzado",en:"Python · advanced"},
-  "C++":{es:"C++ · avanzado",en:"C++ · advanced"},
-  "Java":{es:"Java · intermedio",en:"Java · intermediate"},
   "OpenCV":{es:"Visión computacional (OpenCV)",en:"Computer vision (OpenCV)"}
 };
 
@@ -630,8 +697,8 @@ const EDU = [
   {h:{es:"EDUCACIÓN",en:"EDUCATION"},title:"Universidad de Monterrey (UDEM)",
    p:{es:"Ingeniería en Tecnología Electrónica y Robótica · 2018 — 2024 · San Pedro Garza García, N.L.",en:"B.Eng. in Electronic Technology and Robotics · 2018 — 2024 · San Pedro Garza García, N.L."}},
   {h:{es:"CERTIFICACIONES",en:"CERTIFICATIONS"},title:{es:"Formación continua",en:"Continuing education"},
-   list:{es:["Protocolos de Comunicación Industrial y Gestión de Redes — Vester Industrial Training Center (2026)","Modbus Communication Protocol — Udemy (2026)","DC-3 STPS de seguridad industrial (2025, renovadas 2026): trabajos en altura, espacios confinados, seguridad eléctrica, candadeo y tarjeteo (LOTO), sustancias peligrosas","Especialización en IA — UDEM","Universal Robots e-Series Core Track","AI A-Z (2024)","MATLAB (2021)","Excel de principiante a avanzado — Udemy (2025)"],
-         en:["Industrial Communication Protocols & Network Management — Vester Industrial Training Center (2026)","Modbus Communication Protocol — Udemy (2026)","STPS DC-3 industrial safety certificates (2025, renewed 2026): work at heights, confined spaces, electrical safety, lockout/tagout (LOTO), hazardous materials","AI Specialization — UDEM","Universal Robots e-Series Core Track","AI A-Z (2024)","MATLAB (2021)","Excel from Beginner to Advanced — Udemy (2025)"]}},
+   list:{es:["Protocolos de Comunicación Industrial y Gestión de Redes — Vester Industrial Training Center (2026)","Modbus Communication Protocol — Udemy (2026)","DC-3 STPS de seguridad industrial (2025, renovadas 2026): trabajos en altura, espacios confinados, seguridad eléctrica, candadeo y tarjeteo (LOTO), sustancias peligrosas","Especialización en IA — UDEM","Universal Robots e-Series Core Track","MATLAB (2021)"],
+         en:["Industrial Communication Protocols & Network Management — Vester Industrial Training Center (2026)","Modbus Communication Protocol — Udemy (2026)","STPS DC-3 industrial safety certificates (2025, renewed 2026): work at heights, confined spaces, electrical safety, lockout/tagout (LOTO), hazardous materials","AI Specialization — UDEM","Universal Robots e-Series Core Track","MATLAB (2021)"]}},
   {h:{es:"IDIOMAS",en:"LANGUAGES"},title:{es:"Español · Inglés",en:"Spanish · English"},
    list:{es:["Español — nativo","Inglés — avanzado (C1)"],en:["Spanish — native","English — advanced (C1)"]}}
 ];
@@ -658,6 +725,7 @@ function render(){
     kPhone:'<path d="M6 3h4l2 5-2.5 1.5a11 11 0 005 5L16 12l5 2v4a2 2 0 01-2 2A16 16 0 014 5a2 2 0 012-2"/>',
     kWa:'<path d="M4 20l1.3-3.9A8 8 0 1112 20a8 8 0 01-4-1.1z"/><path d="M9 10h6M9 13h4"/>',
     kGh:'<path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 00-1.3-3.2 4.3 4.3 0 00-.1-3.2s-1-.3-3.4 1.3a11.6 11.6 0 00-6 0C6.8 2.8 5.8 3.1 5.8 3.1a4.3 4.3 0 00-.1 3.2A4.6 4.6 0 004.4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>',
+    kLi:'<rect x="3" y="3" width="18" height="18"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"/>',
     kLoc:'<path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>'
   };
   const I_COPY='<svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12"/><path d="M16 8V4H4v12h4"/></svg>';
@@ -666,6 +734,7 @@ function render(){
     {k:"kEmail",v:CONFIG.email,href:"mailto:"+CONFIG.email,copy:CONFIG.email},
     CONFIG.showPhone && {k:"kPhone",v:CONFIG.phone,href:"tel:"+CONFIG.phoneTel,copy:CONFIG.phone},
     CONFIG.showPhone && CONFIG.whatsapp && {k:"kWa",v:T.waOpen[lang],href:"https://wa.me/"+CONFIG.phoneTel.replace(/\D/g,""),ext:1},
+    CONFIG.linkedin && {k:"kLi",v:CONFIG.linkedin.replace(/^https?:\/\/(www\.)?/,""),href:CONFIG.linkedin,ext:1},
     CONFIG.github && {k:"kGh",v:CONFIG.github.replace("https://",""),href:CONFIG.github,ext:1},
     {k:"kLoc",v:T.loc[lang]}
   ].filter(Boolean);
@@ -680,7 +749,7 @@ function render(){
       <div class="rows">${rows.map(row).join("")}</div>
       <div class="cfoot"><span>${esc(T.cFootL[lang])}</span><span>${esc(T.cFootR[lang])}</span></div>`;
   });
-  const pdf=$("#pdfBtn"); pdf.hidden=!CONFIG.pdf[lang]; if(CONFIG.pdf[lang]) pdf.href=CONFIG.pdf[lang];
+  const pdf=$("#pdfBtn"), pdfHref=CONFIG.pdf[lang]||CONFIG.pdf.es||CONFIG.pdf.en; pdf.hidden=!pdfHref; if(pdfHref){ pdf.href=pdfHref; if(!CONFIG.pdf[lang]) pdf.textContent=T.pdf[lang]+(lang==="en"?" (Spanish)":" (inglés)"); }
 
   $("#aboutBody").innerHTML = ABOUT[lang].map(p=>`<p>${esc(p)}</p>`).join("");
   const note = n => `<div class="note"><b>${esc(n.k)}</b>${esc(n[lang])}</div>`;
